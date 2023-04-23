@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+header{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 1pt solid olivedrab;
+    
+}
+header div{
+    margin-left: 2%;
+    line-height: 40pt;
+}
+header h1{ 
+    font-size: 60pt;
+
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    margin: 15px;
+    font-size: 30pt;
+}
+
+body{
+    
+    background-color: black;
+}
+:root{
+    --minwidth: 1920px;
+    --maxheight: 1600px
+}
+.paper{
+    border: 6px solid white;
+    margin: 0 auto;
+    max-width: calc(100% - 20%);
+    min-width: var(--minwidth);
+    height: var(--maxheight);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+}
+.viewport{
+    border: 6px solid bisque;
+    height: calc( var(--maxheight) - 30px);
+    flex-grow: 1;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.sub{
+    border: 6px solid blue;
+    display: flex;
+    flex-grow: 1;
+    justify-content:space-evenly;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.block{
+    border: 6px solid greenyellow;
+    flex-grow: 1;
+
+    margin: 15px;
+ 
+}
+.titleblock{
+    border: 6px solid blueviolet;
+    height: calc( var(--maxheight) - 30px);
+    min-width: 325px;
+    flex-basis: 25%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+.logospace{
+    border: 6px solid red;
+    /* flex-grow: 1; */
+    flex-basis: 15%;
+}
+.blank{
+    border: 6px solid rgb(30, 199, 86);
+    flex-grow: 1;
+}
+.info{
+    border: 6px solid blue;
+    /* flex-grow: 1; */
+    flex-basis: 40%;
+}
