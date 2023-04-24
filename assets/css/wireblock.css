@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+:root{
+    --seasalt: #fafafaff;
+    --columbia-blue: #b6d0e2ff;
+    --timberwolf: #cfccc4ff;
+    --sunset: #efcc90ff;
+    --buff: #daa68aff;
+    --air-superiority-blue: #789fb1ff;
+}
+body{
+    background-color: var(--timberwolf);
+}
+
+.paper{
+    background-color: var(--seasalt);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 1920px;
+}
+
+.titleblock{
+    border: 1px solid black;
+    flex-grow: 1;
+    flex-basis: 20%; 
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+.logospace{
+    background-image: url(../images/logo.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    flex-grow: 1;
+    flex-basis: 10%;
+    border: 1px solid red;
+    
+}
+.blank{
+    flex-grow: 1;
+    flex-basis: 40%;
+    border: 1px solid red;
+    
+}
+.info{
+    flex-grow: 1;
+    flex-basis: 45%;
+    border: 1px solid red;
+
+}
+
+
+.viewport{
+    color: white;
+    border: 6px solid bisque;
+    height: calc( var(--maxheight) - 30px);
+    flex-grow: 1;
+    flex-basis: 80%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.sub{
+    display: flex;
+    flex-grow: 1;
+    justify-content:space-evenly;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 5px;
+}
+.card{
+    background-image: url(../images/BootonFirehousejpg.jpg);
+    background-size: cover;
+    min-height: 450px;
+    min-width: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    line-height: 1.5;
+    
+}
+.card3{
+    background-image: url(../images/Notes.jpg);
+    background-size: cover;
+    min-height: 450px;
+    min-width: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    line-height: 1.5;
+    
+}
+
+.cardcontainer{
+    padding: 30px;
+    background: linear-gradient(rgba(0, 0, 0, 0),
+            rgba(40, 45, 109, 0.623) 20%,
+            rgb(0, 0, 0) 100%);
+}
+
+.card-title{
+    font-size: 30pt;
+}
+
+.card-desc{
+    font-size: 16pt;
+    margin-bottom: 30px ;
+}
+.button{
+    
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20pt;
+    background-color: var(--air-superiority-blue);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.button:hover,
+.button:active{
+    background-color: var(--columbia-blue);
+    box-shadow: 0 0 15px var(--columbia-blue);
+}
