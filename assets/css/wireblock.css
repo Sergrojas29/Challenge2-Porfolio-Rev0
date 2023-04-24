@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+header{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 1pt solid olivedrab;
+    margin: 0 auto;
+    
+}
+header div{
+    margin-left: 2%;
+    line-height: 40pt;
+}
+header h1{ 
+    font-size: 60pt;
+
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    margin: 15px;
+    font-size: 30pt;
+}
+
+body{
+    
+    background-color: black;
+}
+:root{
+    --minwidth: 1920px;
+    --maxheight: 1600px;
+    --anitime: 1.5s;
+    --glow: linear-gradient(#e66465, #9198e5);
+
+}
+.paper{
+    border: 6px solid white;
+    margin: 0 auto;
+    max-width: calc(100% - 20%);
+    min-width: var(--minwidth);
+    height: var(--maxheight);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+}
+.viewport{
+    border: 6px solid bisque;
+    height: calc( var(--maxheight) - 30px);
+    flex-grow: 1;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.sub{
+    border: 6px solid blue;
+    display: flex;
+    flex-grow: 1;
+    justify-content:space-evenly;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.block{
+    border: 6px solid greenyellow;
+    flex-grow: 1;
+
+    margin: 15px;
+ 
+}
+.titleblock{
+    border: 6px solid blueviolet;
+    height: calc( var(--maxheight) - 30px);
+    min-width: 325px;
+    flex-basis: 25%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+.logospace{
+    border: 6px solid red;
+    /* flex-grow: 1; */
+    flex-basis: 15%;
+}
+.blank{
+    border: 6px solid rgb(30, 199, 86);
+    flex-grow: 1;
+    flex-basis: 35%;
+}
+.info{
+    border: 6px solid blue;
+    /* flex-grow: 1; */
+    flex-basis: 40%;
+}
+
+.blank:hover{
+    border-bottom: 10pt solid skyblue;
+    transition: var(--anitime);
+    transition-delay: .5s;
+    flex-basis: 80%;
+}
+
+.info:hover{
+    transition: var(--anitime);
+    flex-basis: 60%;
+    
+}
+
+
+
+
+
+@media screen and (max-width: 1910px) {
+
+header{
+    flex-direction: column;
+}
+
+header div{
+    text-align: center;
+    line-height: 60pt;
+}
+
+.paper{
+    flex-direction: column-reverse;
+    min-width: auto;
+    max-width: 100%;
+
+
+}
+.titleblock{
+    flex-direction: row;
+    min-width: 100%;
+    flex-wrap: wrap;
+
+}
+
+.viewport{
+    min-width: 100%;    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}
