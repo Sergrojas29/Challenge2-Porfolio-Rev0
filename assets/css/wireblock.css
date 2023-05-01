@@ -1,67 +1,223 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
 }
 
-:root{
-    --seasalt: #fafafaff;
+:root {
+    --GenRadius: 25px;
+    /* --seasalt: rgb(87, 87, 87); */
+    --seasalt: rgb(224, 223, 223);
     --columbia-blue: #b6d0e2ff;
-    --timberwolf: #cfccc4ff;
+    /* --timberwolf: rgb(36, 34, 31); */
+    --timberwolf: rgb(94, 92, 88);
     --sunset: #efcc90ff;
     --buff: #daa68aff;
     --air-superiority-blue: #789fb1ff;
+    --bordercolorforline: rgb(139, 139, 139);
+    --Grad: linear-gradient(315deg, #485461 0%, #28313b 74%);
 }
-body{
+
+header {
+    justify-content: space-between;
+    align-items: center;
+    background-color: linear-gradient(var(--timberwolf) 0%, var(--air-superiority-blue) 100%);
+    flex-direction: column;
+    color: var(--sunset);
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    /* min-width: 1290px; */
+
+}
+
+header div {
+    text-align: center;
+    line-height: 60pt;
+    margin-left: 2%;
+    line-height: 40pt;
+}
+
+header h1 {
+    font-size: 60pt;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+
+    margin: 30px 15px;
+    font-size: 30pt;
+}
+
+body {
     background-color: var(--timberwolf);
 }
 
-.paper{
-    background-color: var(--seasalt);
+.paper {
     margin: 0 auto;
+    border-radius: var(--GenRadius);
+    background-color: var(--seasalt);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     max-width: 1920px;
+    box-shadow: 5px 5px rgb(58, 58, 58);
 }
 
-.titleblock{
-    border: 1px solid black;
+.titleblock {
+    background-color: var(--seasalt);
+    min-width: 300px;
+    font-family: monospace;
+    border: 1px solid var(--bordercolorforline);
+    border-radius: var(--GenRadius);
+    overflow: hidden;
     flex-grow: 1;
-    flex-basis: 20%; 
+    flex-basis: 20%;
     display: flex;
     flex-direction: column;
     color: black;
 }
-.logospace{
+
+.logospace {
     background-image: url(../images/logo.png);
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     flex-grow: 1;
     flex-basis: 10%;
-    border: 1px solid red;
-    
+    /* border: 1px solid red; */
+
 }
-.blank{
+
+.blank {
     flex-grow: 1;
     flex-basis: 40%;
-    border: 1px solid red;
-    
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+
 }
-.info{
+
+.me {
+    max-height: auto;
+    margin: 30px;
+    border-radius: 50%;
+    flex-basis: 20%;
+    flex-grow: 1;
+}
+
+.links {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.cut {
+    display: flex;
+    flex-direction: column;
+}
+
+div a img {
+    height: 50px;
+    height: 50px;
+}
+
+.contactme {
+    display: flex;
+    align-self: center;
+}
+
+
+.info {
     flex-grow: 1;
     flex-basis: 45%;
-    border: 1px solid red;
+    border: 1px solid var(--bordercolorforline);
+    display: flex;
+    flex-direction: column;
+}
+
+.rev {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
 }
 
+.date,
+.desc {
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: space-evenly;
+}
 
-.viewport{
+.date {
+    flex-grow: 1;
+}
+
+.desc {
+    flex-grow: 3;
+}
+
+.box {
+    height: 20px;
+    flex-grow: 1;
+    border: .25px solid var(--bordercolorforline);
+    align-content: space-evenly;
+}
+
+.tile {
+    border: .25px solid var(--bordercolorforline);
+    padding-left: 5px;
+}
+
+.contain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.sblock {
+    font-size: 11pt;
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+    line-height: 18px;
+    border: .5pt solid var(--bordercolorforline);
+    flex-grow: 1;
+    text-align: center;
+}
+
+.drawing-info {
+    border: .5pt solid var(--bordercolorforline);
+    text-align: center;
+    padding: 5px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20pt;
+
+}
+
+.drawing {
+    font-size: 30pt;
+    border: .5pt solid var(--bordercolorforline);
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.viewport {
+    font-family: sans-serif;
     color: white;
-    border: 6px solid bisque;
-    height: calc( var(--maxheight) - 30px);
+    height: calc(var(--maxheight) - 30px);
     flex-grow: 1;
     flex-basis: 80%;
     align-self: center;
@@ -70,17 +226,20 @@ body{
     justify-content: space-evenly;
 }
 
-.sub{
+.sub {
     display: flex;
     flex-grow: 1;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: nowrap;
     margin: 5px;
 }
-.card{
-    background-image: url(../images/BootonFirehousejpg.jpg);
-    background-size: cover;
+
+.card,
+.card2,
+.card3,
+.card4 {
+    transition: 1s;
     min-height: 450px;
     min-width: 450px;
     border-radius: 15px;
@@ -89,39 +248,50 @@ body{
     flex-direction: column;
     justify-content: end;
     line-height: 1.5;
-    
-}
-.card3{
-    background-image: url(../images/Notes.jpg);
-    background-size: cover;
-    min-height: 450px;
-    min-width: 450px;
-    border-radius: 15px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    line-height: 1.5;
-    
+
 }
 
-.cardcontainer{
+.card {
+    background-image: url(../images/BootonFirehousejpg.jpg);
+    background-size: cover;
+
+}
+
+.card2 {
+    background-image: url(../images/Townhouse.png.jpg);
+    background-size: cover;
+
+}
+
+.card3 {
+    background-image: url(../images/Notes.jpg);
+    background-size: cover;
+}
+
+.card4 {
+    background-image: url(../images/aboutmeimage.jpg);
+    background-size: cover;
+
+}
+
+.cardcontainer {
     padding: 30px;
     background: linear-gradient(rgba(0, 0, 0, 0),
             rgba(40, 45, 109, 0.623) 20%,
             rgb(0, 0, 0) 100%);
 }
 
-.card-title{
+.card-title {
     font-size: 30pt;
 }
 
-.card-desc{
+.card-desc {
     font-size: 16pt;
-    margin-bottom: 30px ;
+    margin-bottom: 30px;
 }
-.button{
-    
+
+.button {
+
     cursor: pointer;
     text-decoration: none;
     font-size: 20pt;
@@ -131,7 +301,79 @@ body{
 }
 
 .button:hover,
-.button:active{
+.button:active {
     background-color: var(--columbia-blue);
     box-shadow: 0 0 15px var(--columbia-blue);
+}
+
+.card:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover {
+    box-shadow: 0px 0px 60px var(--columbia-blue), 0 0 20px var(--columbia-blue)
+}
+
+
+.card:hover {
+    transition: 2s;
+    flex-grow: 2;
+
+}
+
+.card2:hover {
+    transition: 2s;
+    flex-grow: 2;
+    background-image: url(../images/Townhouse2.jpg);
+}
+
+.card3:hover {
+    transition: 2s;
+    flex-grow: 2;
+
+}
+
+.card4:hover {
+    transition: 2s;
+    flex-grow: 2;
+
+}
+
+
+footer {
+    color: white;
+    margin-top: 60px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1250px) {
+
+    header {
+        min-width: 500px;
+
+    }
+
+    header h1 {
+        font-size: 30pt;
+    }
+
+    nav a {
+        font-size: 15pt;
+    }
+
+
+    .paper {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+    }
+
+    .viewport{
+        flex-direction: column;
+    }
+    .sub{
+        flex-direction: column;
+    }
+
+
+
 }
